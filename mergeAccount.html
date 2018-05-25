@@ -1,0 +1,90 @@
+<div class="body-NewMerge">
+    <div class="title-next">
+        <h1 class="title_next">请选择登陆账号</h1>
+        <p class="text_next">{{info.nameParam}},请选择天府一账通登录账号</p>
+    </div>
+    <div class="AccountMerge-App">
+        <div ng-class="phoneChecked ? 'Option-App1':'Option-App2'" ng-click="inputClick('1')">
+            <input type="checkbox" class="input-App1" ng-model="phoneChecked" />
+            <h3>{{info.phoneAccount}}</h3><br>
+        </div>
+        <div class="mt15" ng-class="pandaChecked ? 'Option-App1':'Option-App2'" ng-click="inputClick('2')">
+            <input type="checkbox" class="input-App2" ng-model="pandaChecked"/>
+            <h3>{{info.pandaAccount}}</h3><br>
+        </div>
+        <h4><a ng-click="showMessage1()" style="color: #789EF3">手机号已变更？</a></h4>
+    </div>
+    <div class="MessageAgree-APP">
+        <a ng-click="nextProgrcess()">下一步</a>
+    </div>
+    <div class="clear"></div>
+
+    <div class="verificationSMSModal" ng-style="info.verificationSMSModal1" ng-show="isShow==true">
+        <div class="verificationSMS_content">
+            <div class="verificationSMS_header">
+                <i class="verificationSMS_header_close"><img src="img/errorPicture.png" ng-click="closeVerificationSMSModal()" /></i>
+                <span>请输入短信验证码</span>
+            </div>
+            <div ng-style="info.stepStyle.step1" class="step_wrapper">
+                <div class="verificationSMS_section">
+                    <p class="verificationSMS_tip">
+                        <span>已发送至您的手机号{{currentAccount || ''}}</span>
+                        <span class="verificationSMS_tip_option" ng-click="showMessage()">收不到验证码？</span>
+                    </p>
+                    <div class="verificationSMS_codeBox">
+                        <span ng-repeat="code in info.codeArray" class="verificationSMS_codeItem" ng-style="info.codeStyle">{{code.value}}</span>
+                    </div>
+                    <div class="verificationSMS_time">
+                        <span ng-if="info.showTime">{{info.timeValue}}秒</span>
+                        <span class="verificationSMS_time_btn" ng-if="!info.showTime" ng-click="sendCode()">重新发送验证码</span>
+                    </div>
+                </div>
+                <div class="verificationSMS_keyboard">
+                    <span ng-repeat="key in info.keyboardValues" class="verificationSMS_key_item" ng-class="key.className" ng-click="clickKeyItem(key)">
+          {{key.value}}
+        </span>
+                </div>
+
+            </div>
+            <div ng-style="info.stepStyle.step2" class="step_wrapper">
+                <div class="com_loading_box">
+                    <img class="com_waiting" ng-style="info.waitingStyle" src="img/com_loading_pay.png" />
+                    <img class="com_finish" ng-style="info.finishStyle" src="img/com_success_pay.png" />
+                    <p ng-bind="info.checkResult" class="com_loading_box_text"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="full_page_message" ng-style="info.messgePageStyle" ng-show="isShowSure==true">
+            <p class="verificationSMS_msg_title">
+                接收不到验证码
+            </p>
+            <p class="verificationSMS_msg_des">
+                请编辑DZ发短信到<span class="cellphone_text">1069099996869</span>
+            </p>
+            <p class="verificationSMS_msg_des">
+                和编辑DG发短信到<span class="cellphone_text">1069080096869</span>
+            </p>
+            <p class="verificationSMS_msg_des">
+                半小时后生效
+            </p>
+            <i class="full_page_message_close"><img src="img/Grouppp.png" ng-click="closeVerificationSMSModalPage()" /></i>
+        </div>
+        
+        
+    </div>
+    <div class="full_page_message1" ng-style="info.messgePageStyle1"  ng-show="messageShow">
+            <p class="verificationSMS_msg_title">
+                手机号已变更
+            </p>
+            <p class="verificationSMS_msg_des">
+                1.回到登陆界面
+            </p>
+            <p class="verificationSMS_msg_des">
+                 2.点击登陆按钮下方"登陆遇到问题"
+            </p>
+            <p class="verificationSMS_msg_des">
+                3.点击"手机号已变更",根据提示完成操作
+            </p>
+            <i class="full_page_message_close"><img src="img/Grouppp.png" ng-click="closeMessage()" /></i>
+        </div>

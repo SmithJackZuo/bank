@@ -1,0 +1,374 @@
+body{
+    font-family: 'Arial';
+    padding: 16px;
+    margin: 0;
+    overflow-y:scroll;
+}
+a{
+    text-decoration: none;
+}
+.Top-Message{
+    /*    top: 103px;*/
+    /*  width: 342px;*/
+    line-height: 40px;
+    color: rgba(41, 48, 64, 1);
+    font-size: 24px;
+    text-align: left;
+    font-family: PingFangSC-Medium;
+}
+.Formation-input1{
+    float: left;
+    width: 65%;
+    margin-left: 52px;
+    padding: 6px 5px 7px 5px;
+    border: 0;
+    font-size: 20px;
+    color: rgba(41, 48, 64, 1);
+}
+.Formation-input2{
+    float: left;
+    width: 65%;
+    margin-left: 18px;
+    padding: 6px 5px 7px 5px;
+    border: 0;
+    font-size: 18px;
+    color: rgba(41, 48, 64, 1);
+}
+.Formation-App h2{
+    float: left;
+    margin: 2px;
+    line-height: 28px;
+    color: rgba(112, 120, 135, 1);
+    font-size: 16px;
+    text-align: left;
+    font-family: PingFangSC-Regular;
+}
+.Formation-App{
+    float: left;
+}
+.clear{
+    clear: both;
+}
+.AccountMerge-App{
+    margin-top: 12%;
+    float: left;
+    width: 100%;
+}
+.Option-App1{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 229, 124, 0.2);
+    box-shadow: 0 3px 6px 0 rgba(222, 225, 232, 1);
+    border: 1px solid rgba(255, 214, 48, 1);
+}
+.Option-App2{
+    width: 100%;;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 6px 0 rgba(222, 225, 232, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.mt15{
+    margin-top: 15px;
+}
+.input-App1{
+    float: right;
+    width: 25px;
+    height: 20px;
+    margin: 19px
+}
+.input-App2{
+    float: right;
+    width: 25px;
+    height: 20px;
+    margin: 19px
+}
+
+
+.AccountMerge-App input[type="radio"] {
+    position:relative;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    border:1px solid #d9d9d9;
+    border-radius:50%;
+    background:transparent;
+    vertical-align: middle;
+    -webkit-appearance:none;
+
+}
+
+.AccountMerge-App input[type="radio"]:checked {
+    background:#FFD630;
+    border:none;
+    outline: none;
+}
+
+.AccountMerge-App .checkBox-text {
+    color:#293040;
+    font-size:16px;
+    vertical-align: middle;
+    margin-left:1px;
+}
+
+.AccountMerge-App input[type="radio"]::before {
+    border:none;
+    background: none;
+}
+
+.AccountMerge-App input[type="radio"]:checked:after {
+    border:2px solid #293040;
+    top: 30%;
+    left: 26%;
+    position: absolute;
+    display: table;
+    width: 10px;
+    height: 6px;
+    border-top: 0;
+    border-right: 0;
+    content: ' ';
+    opacity: 1;
+    -webkit-transition: opacity 0.05s ease-in-out;
+    transition: opacity 0.05s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.Option-App1 h3{
+    margin-left: 12px;
+    line-height: 30px;
+    color: rgba(112, 120, 135, 1);
+    font-size: 15px;
+    text-align: left;
+    font-family: PingFangSC-Regular;
+}
+.Option-App2 h3{
+    margin-left: 12px;
+    line-height: 30px;
+    color: rgba(112, 120, 135, 1);
+    font-size: 15px;.AccountMerge-App
+text-align: left;
+    font-family: PingFangSC-Regular;
+}
+.AccountMerge-App h4{
+    margin-top: 45px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    color: rgba(112, 120, 135, 1);
+    font-size: 14px;
+    text-align: left;
+    font-family: PingFangSC-Regular;
+}
+.MessageAgree-APP{
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+    /* right: 16px; */
+    width: calc(100% - 32px);
+    height: 52px;
+    border-radius: 4px;
+    background-color: rgba(255, 214, 48, 1);
+    cursor: pointer;
+    text-align: center;
+}
+.MessageAgree-APP a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    color: rgba(51, 51, 51, 1);
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+}
+
+/**/
+
+/**** 自定义弹出框 ****/
+.popupbox {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+/* 文本表单型 */
+.popupbox-text {
+    width: 260px;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    margin-left: -130px;
+    z-index: 10000;
+    -webkit-animation: scalePopup 0.3S;
+    animation: scalePopup 0.3S;
+    display: none;
+}
+.popupbox-text.iPhoneStyle {
+    width: 100%;
+    border-radius: 0;
+    left: 0; bottom: 0;
+    margin-left: 0;
+    -webkit-animation: slide_bottomPopup 0.3S;
+    animation: slide_bottomPopup 0.3S;
+}
+
+/* 自定义弹出框--标题栏 */
+h1.popup-header {
+    padding:16px 0;
+    line-height: 22px;
+    text-align:center;
+    font-size: 16px;
+    color: #293040;
+    position: relative;
+    margin-bottom: 0;
+}
+h1.popup-header .close-outline {
+    width: 28px; height: 28px;
+    line-height: 28px;
+    font-size: 28px;
+    text-indent: 0;
+    position: absolute;
+    top: 10px; right: 8px;
+}
+.popup-code {
+    font-size: 14px;
+    position: absolute;
+    color: #fff;
+}
+/* 自定义弹出框--主要内容 */
+.popup-content {
+    max-height:108px;
+    overflow-y:auto;
+    padding: 4px 26px;
+    line-height: 20px;
+    font-size: 14px;
+    color:#717787;
+    margin: 20px 0;
+    text-align: center
+}
+.iPhoneStyle .popup-content {
+    margin-bottom: 112px;
+}
+.popup-content input[type='text'] {
+    width: 100%; height: 42px;
+    /*background-color: #ededed;*/
+    background-color: #fff;
+    border: 1px solid #dfe1e6;
+    padding: 0 6px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #9b9b9b;
+    -webkit-appearance: none;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+}
+.popup-content input[type='text']:focus {
+    box-shadow: 0 0 10px rgba(178, 178, 178, 0.3);
+}
+.popup-content input[type='text'].readonly {
+    background-color: #ededed;
+}
+
+/* 自定义弹出框--按钮区域 */
+.popup-footer {
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    display: -moz-flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    background-image:-webkit-linear-gradient(90deg, transparent 50%, #DFE1E6, #DFE1E6 50%);
+    background-image:linear-gradient(0deg, transparent 50%,#DFE1E6, #DFE1E6 50%);
+    background-position: top,bottom;
+    background-size:100% 1px,100% 1px;
+    background-repeat: no-repeat;
+}
+
+.iPhoneStyle .popup-footer {
+    height: 112px;
+    text-align: center;
+    padding: 0;
+}
+.popup-footer.popup-footer-onlyOne {
+    background-image:none;
+}
+
+.popup-footer button.cancelBtn, .popup-footer button.sureMesg {
+    height: 100%;
+    font-size: 16px;
+    border: none;
+    -moz-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    box-flex: 1;
+    flex: 1;
+}
+.iPhoneStyle .popup-footer button {
+    width: 276px;
+    position: absolute;
+    float: none;
+}
+.iPhoneStyle .popup-footer button.sureMesg {
+    margin-left: 0; margin-right: 0;
+    left: 22px; right: 22px;
+}
+.iPhoneStyle .popup-footer button.cancelBtn {
+    margin-left: 0; margin-right: 0;
+    left: 22px; bottom: 16px; right: 22px;
+}
+/* 取消按钮 */
+.popup-footer button.cancelBtn {
+    background-color: transparent;
+    color: #293040;
+    border-bottom-left-radius: 5px;
+}
+
+.popup-footer button.cancelBtn:active {
+    background-color: #f6f7f9;
+}
+/* 确认按钮 */
+.popup-footer button.sureMesg {
+    background-color: #ffd630;
+    color: #333;
+    border-bottom-right-radius: 5px;
+}
+.popup-footer button.sureMesg:active {
+    background-color: #ffc730;
+}
+.popup-footer button.sureMesg.alertBtn {
+    border-bottom-left-radius: 5px;
+}
+
+/* 弹出框遮罩层 */
+.maskLayer {
+    width: 100%; height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: 9999;
+    opacity: 0.4;
+}
+
+/**** 弹出框出现效果 ****/
+/* 放大效果 */
+@-webkit-keyframes scalePopup {
+    0% { -webkit-transform: scale(0.1); transform: scale(0.1);}
+    100% { -webkit-transform: scale(1); transform: scale(1);}
+}
+@keyframes scalePopup {
+    0% { -webkit-transform: scale(0.1); transform: scale(0.1);}
+    100% { -webkit-transform: scale(1); transform: scale(1);}
+}
+/* 从下侧向上滑动出现的效果 */
+@-webkit-keyframes slide_bottomPopup {
+    0% { top: 100%; bottom: -100%;}
+    100% { bottom: 0}
+}
+@keyframes slide_bottomPopup {
+    0% { top: 100%; bottom: -100%;}
+    100% { bottom: 0}
+}

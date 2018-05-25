@@ -1,0 +1,308 @@
+.verificationSMSModal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(49,55,66,0.6);
+  transform: translateY(100%);
+  transition:transform 500ms;
+
+}
+
+.verificationSMS_content {
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:117.3333vw;
+  transform: translateY(0px);
+  background-color: #fff;
+}
+
+.verificationSMS_header {
+  position:relative;
+  height:12.8vw;
+  line-height:12.8vw;
+  color:#333;
+  font-size: 16px;
+  text-align: center;
+  background-color:#fff;
+  background-image: -webkit-linear-gradient(90deg, transparent 50%, #DFE1E6, #DFE1E6 50%);
+  background-image: linear-gradient(0deg, transparent 50%,#DFE1E6, #DFE1E6 50%);
+  background-position: 0 bottom;
+  background-size:100% 1px;
+  background-repeat: no-repeat;
+}
+
+.verificationSMS_header_close {
+   position:absolute;
+   left:16px;
+   height:100%;
+   width:48px;
+   text-align: left;
+   color:#ccc;
+   font-size: 32px;
+   vertical-align: middle;
+ }
+.verificationSMS_header_close > img {
+  height: 24px;
+}
+
+.step_wrapper {
+  position:absolute;
+  left:0;
+  right:0;
+  top:12.8vw;
+  bottom:0;
+  margin:auto;
+  width:100%;
+  -webkit-transition:-webkit-transform 500ms;
+  transition:transform 500ms;
+}
+
+.verificationSMS_section {
+
+}
+
+.verificationSMS_tip {
+  margin-top:4.8vw;
+  margin-bottom:4.8vw;
+  font-size: 14px;
+  color:#A1A6B3;
+  line-height: 5.3333vw;
+  text-align: center;
+}
+
+.verificationSMS_tip_option {
+  margin-left:2px;
+  color:#3862EA;
+}
+
+.verificationSMS_codeBox {
+  margin:0 16px;
+  border:1px solid #DFE1E6;
+  border-radius: 8px;
+  height:12.8vw;
+}
+
+.verificationSMS_codeItem {
+  display: inline-block;
+  width:16.4%;
+  height:100%;
+  line-height:46px; /*行高需要js计算，因为父容器有1px的边框*/
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  color:#293040;
+  border-right:1px solid #DFE1E6;
+
+}
+
+.verificationSMS_codeItem:last-child {
+  border-right: none;
+}
+
+.verificationSMS_time {
+  margin:7.4666vw 16px 6.6vw;
+  font-size:16px;
+  color:#8F95A3;
+  line-height:5.8666vw;
+  text-align: center;
+}
+
+.verificationSMS_time_btn {
+  color:#3862EA;
+}
+
+.verificationSMS_keyboard {
+  padding:1.3333vw 1.0666vw 1.86666vw;
+  background-color:#D2D5DB;
+}
+
+.verificationSMS_key_item {
+  display:inline-block;
+  width:32vw;
+  height:12.8vw;
+  line-height: 12.8vw;
+  background-color: #fff;
+  font-size: 25px;
+  color:#000;
+  text-align: center;
+  margin-left:1.0666vw;
+  margin-top:0.8vw;
+  vertical-align: middle;
+  border-radius: 6px;
+}
+
+
+.key_space,
+.key_space.verificationSMS_key_item:active {
+  background-color: transparent;
+}
+
+.verificationSMS_key_item:active,
+.key_del.verificationSMS_key_item:active {
+  background-color: #FFD630;
+}
+
+
+.key_leftRow {
+  width:31.7333vw;
+  margin-left:0;
+}
+
+.key_del {
+  background: url('../img/com_keyboard_delete.png') no-repeat center center;
+  background-size: 36px 36px;
+}
+
+.com_loading_box {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  text-align: center;
+  padding:0 16px;
+}
+
+.com_loading {
+  display:inline-block;
+
+  margin-top:30.9333vw;
+  font-size: 70px;
+  color:#FFD630;
+  -webkit-animation:rotateLoading 500ms linear 2s infinite;
+  animation:rotateLoading 500ms linear 2s infinite;
+}
+
+.com_loading_box_text {
+  margin-top:50.6666vw;
+}
+
+.com_waiting {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30.9333vw;
+  width:64px;
+  height:64px;
+  -webkit-animation:rotateLoading 500ms linear 2s infinite;
+  animation:rotateLoading 500ms linear 2s infinite;
+  -webkit-transition:opacity 1s;
+  transition:opacity 1s;
+}
+
+.com_finish {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30.9333vw;
+  width:64px;
+  height:64px;
+  opacity:0;
+  -webkit-transition:opacity 1s;
+  transition:opacity 1s;
+}
+
+@-webkit-keyframes rotateLoading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: translate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: translate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: translate(360deg);
+  }
+}
+
+@keyframes rotateLoading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: translate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: translate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: translate(360deg);
+  }
+}
+
+.full_page_message {
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background-color: #fff;
+  -webkit-transform:translateY(200%);
+  transform:translateY(100%);
+  -webkit-transition:-webkit-transform 500ms;
+  transition:transform 500ms;
+  text-align: center;
+  padding:0 16px;
+}
+.full_page_message1 {
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background-color: #fff;
+  -webkit-transform:translateY(100%);
+  transform:translateY(100%);
+  -webkit-transition:-webkit-transform 500ms;
+  transition:transform 500ms;
+  text-align: center;
+  padding:0 16px;
+}
+
+.full_page_message_close {
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:14.9333vw;
+  margin:auto;
+  color: #A1A6B3;
+}
+.full_page_message_close img{
+  width:32px ;
+}
+
+.verificationSMS_msg_title {
+  margin-top:39.7333vw;
+  margin-bottom: 7.7333vw;
+  line-height:8.8vw;
+  font-size: 24px;
+  color:#293040;
+}
+
+.verificationSMS_msg_des {
+  font-size: 16px;
+  color:#717787;
+  line-height:8vw;
+  width:257px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.cellphone_text {
+  color:#477BEF;
+}

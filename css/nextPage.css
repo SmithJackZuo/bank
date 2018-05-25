@@ -1,0 +1,124 @@
+body{
+    font-family: 'Arial';
+    padding: 16px;
+    margin: 0;  
+}
+a{
+    text-decoration: none;
+}
+.body-next{
+     width: 100%;
+}
+.title-next{
+  float: left;
+  width: 100%; 
+  margin-top: 18%;
+}
+.title_next{
+    line-height: 40px;
+    color: rgba(41, 48, 64, 1);
+    font-size: 28px;
+    text-align: left;
+    font-family: PingFangSC-Medium;
+}
+.text_next{
+width: 100%;
+line-height: 20px;
+color: rgba(161, 166, 179, 1);
+font-size: 14px;
+text-align: left;
+font-family: PingFangSC-Regular;
+}
+.content-next{
+    position: relative;
+    float: left;
+    width: 100%;
+    /*height: 185px;*/
+    /*background: url(../img/combine_bg@2x.png);*/
+    margin-top: 15px;
+}
+
+.image_next{
+width: 100%;
+/*display: inline-block;*/
+}
+
+.textcontent_next{
+display: inline-block;
+color: rgba(41, 48, 64, 1);
+font-size: 13px;
+text-align: center;
+margin: 0;
+font-family: PingFangSC-Regular;
+
+}
+
+.next_next{
+    width: 100%;
+    margin-top: 30px;
+    float: left;
+    height: 52px;
+    border-radius: 4px;
+    background-color: rgba(255, 214, 48, 1);
+    cursor: pointer;
+    text-align: center;
+}
+.next_next a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    color: rgba(51, 51, 51, 1);
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+}
+
+/*complate页面*/
+.content-next1{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 220px;
+    background: url(../img/bg2@2x.png);
+    margin-top: 15px;
+}
+.img_complate{
+    float: left;
+width: 100%;
+height: 60px;
+margin-top: 35px;
+text-align: center;
+}
+.imgG_complate{
+    width: 100px;
+}
+
+.title-complate{
+    margin: 0;
+    margin-top: 10px;
+float: left;
+width: 100%;
+text-align: center;
+color: rgba(41, 48, 64, 1);
+font-size: 28px;
+height: 40px;
+line-height: 40px;
+font-family: PingFangSC-Medium;
+}
+.content_complate{
+    position: absolute;
+    top: 140px;
+    left: 20%;
+    width: 210px;
+    margin-top: 10px;
+    float: left;
+    height: 40px;
+    line-height: 20px;
+    color: rgba(113, 119, 135, 1);
+    font-size: 14px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+
+}
+
+
